@@ -1,0 +1,34 @@
+[project]
+name = "value-disagreement"
+description = "Experimental code for analyzing disagreement in Reddit discussions with a focus on value conflicts"
+version = "0.0.1"
+authors = [
+    { name = "Michiel van der Meer", email = "m.t.van.der.meer@liacs.leidenuniv.nl" },
+]
+dependencies = [
+    "seaborn",
+    "matplotlib",
+    "transformers",
+    "torch",
+    "gensim",
+    "tqdm",
+    "scikit-learn",
+    "numpy",
+    "pandas",
+    "praw",
+    "bertopic",
+    "mong",
+    "ray[tune]",
+    "datasets",
+    "networkx",
+    "spacy",
+    "fasttext",
+    "protobuf==3.19.6"
+]
+
+[tool.setuptools]
+py-modules = ["value_disagreement"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
