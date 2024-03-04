@@ -48,3 +48,12 @@ Where `[POSTS PATH]` is the same as `[SAVE PATH]` from the data collection step,
 
 TBD. The notebook `analyse_subreddits.ipynb` contains some reference code.
 
+
+### Value Classifier evaluation
+
+To run the evaluation, we first generate a synthetic dataset of Reddit posts exhibitive of a certain value and then perform evaluation.
+
+```bash
+python scripts/synthetic_eval.py [MODEL CHECKPOINT] [GENERATION FLAG] [GENERATION CUT-OFF] [POSTS PATH]
+```
+ Where `GENERATION FLAG` is the flag determining whether to run the synthetic data generation.
