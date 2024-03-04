@@ -44,7 +44,7 @@ def count_word_occurrences(list_of_words:list, target_string:list)-> int:
         count += target_string.count(word)
     return count
 
-def convert_value_dict(path_to_value_dict:str="../data/personal-values-dictionary.dicx"):
+def convert_value_dict(path_to_value_dict:str=f"{ROOT_DIR}/data/personal-values-dictionary.dicx"):
     """Converts the Schwartz Value Dictionary from .dicx to .csv format."""
 
     value_df = pd.read_csv(path_to_value_dict)
