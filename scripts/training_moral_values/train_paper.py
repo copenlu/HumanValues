@@ -1,4 +1,3 @@
-import wandb
 import argparse
 import json
 import sys
@@ -146,7 +145,6 @@ def main(args):
     # Training arguments
     training_args = TrainingArguments(
         f"value_estimation_trainer_{args.train_dataset}_new_tok",
-        report_to="none" if args.eval_only else "wandb",
         num_train_epochs=args.epochs,
         learning_rate=args.learning_rate,
         weight_decay=args.weight_decay,
@@ -231,7 +229,7 @@ def main(args):
                     compute_metrics=compute_metrics,
                 )
                 trainer.train()
-                model_name = f"moral_values_trainer_{args.use_model}_{args.train_dataset}_{i}_new_tok"
+                model_name = f"moral_values_trainer_{args.use_model}_{args.train_dataset}_{i}"
                 results = trainer.predict(tokenized_dataset_test)
                 dump_predictions(
                     args,
@@ -254,7 +252,6 @@ def main(args):
 
 
 if __name__ == "__main__":
-    wandb.init(project="Creddit")
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "train_dataset",
