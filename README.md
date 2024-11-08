@@ -57,3 +57,17 @@ To run the evaluation, we first generate a synthetic dataset of Reddit posts exh
 python scripts/synthetic_eval.py [MODEL CHECKPOINT] [GENERATION FLAG] [GENERATION CUT-OFF] [POSTS PATH]
 ```
  Where `GENERATION FLAG` is the flag determining whether to run the synthetic data generation.
+
+## Citation
+If you use our code or dataset, kindly cite it using
+```
+@misc{borenstein2024investigatinghumanvaluesonline,
+      title={Investigating Human Values in Online Communities}, 
+      author={Nadav Borenstein and Arnav Arora and Lucie-Aimée Kaffee and Isabelle Augenstein},
+      year={2024},
+      eprint={2402.14177},
+      archivePrefix={arXiv},
+      primaryClass={cs.SI},
+      url={https://arxiv.org/abs/2402.14177}, 
+}
+```
